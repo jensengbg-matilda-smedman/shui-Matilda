@@ -7,6 +7,8 @@ const auth = require('./routes/auth');
 const users = require('./routes/users');
 const flows = require('./routes/flows');
 const newFlow = require('./routes/newFlow');
+const hashtags = require('./routes/hashtags');
+const hashtagsFollowed = require('./routes/hashtagsFollowed');
 
 const App = express();
 
@@ -18,6 +20,8 @@ App.use('/auth', auth);
 App.use('/users', users);
 App.use('/flows', flows);
 App.use('/newFlow', newFlow);
+App.use('/hashtags', hashtags);
+App.use('/hashtagsFollowed', hashtagsFollowed)
 
 
 App.listen(3000, () => {

@@ -15,8 +15,9 @@ router.post('/', async (req, res) => {
         let user = {
             uuid: shortid.generate(),
             username: req.body.username,
-            password: HASHED_PW, // hash with bcrypt
-            userkey: ENCRYPTED_USERKEY // encrypted with SECRET
+            password: HASHED_PW,
+            userkey: ENCRYPTED_USERKEY,
+            hashtagsFollowed: []
         }
         
         // Add new user to db

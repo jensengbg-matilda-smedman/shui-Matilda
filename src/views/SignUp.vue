@@ -1,15 +1,17 @@
 <template>
-  <div class="landing">
-    <header>
+  <div class="login">
+    <div class="logored">
       <img src="../assets/reds.svg" alt="" />
-    </header>
-    <main>
+    </div>
+    <header>
       <div class="mainDiv">
         <img src="../assets/s.svg" alt="" />
         <h1>SHUI</h1>
         <h3>FLOW FREELY</h3>
       </div>
-    </main>
+      <NewCredentials />
+      <p @click="goTo">Har du redan konto?</p>
+    </header>
     <footer>
       <img src="../assets/wave.svg" alt="" />
     </footer>
@@ -17,31 +19,39 @@
 </template>
 
 <script>
+import NewCredentials from "../components/NewCredentials"
 export default {
-  name: "Home",
-   mounted() {
-    setTimeout(() => {
-      this.$router.replace("/register");
-    }, 2000);
+  name: "SignUp",
+  components: {
+    NewCredentials
   },
-};
+  methods: {
+      goTo() {
+           this.$router.push('/login')
+      }
+  }
+}
 </script>
 
 <style scoped>
-.landing {
+.login {
   background-color: #082756;
   display: flex;
   flex-direction: column;
 }
-header {
+.logored {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 .mainDiv {
   display: flex;
+  margin: auto;
   flex-direction: column;
   align-items: center;
+}
+p {
+    color: #ffffff98;
 }
 h1 {
   margin-bottom: 0;

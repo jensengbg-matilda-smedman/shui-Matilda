@@ -1,15 +1,16 @@
 <template>
-  <div class="landing">
-    <header>
+  <div class="login">
+    <div class="logored">
       <img src="../assets/reds.svg" alt="" />
-    </header>
-    <main>
+    </div>
+    <header>
       <div class="mainDiv">
         <img src="../assets/s.svg" alt="" />
         <h1>SHUI</h1>
         <h3>FLOW FREELY</h3>
       </div>
-    </main>
+      <Credentials />
+    </header>
     <footer>
       <img src="../assets/wave.svg" alt="" />
     </footer>
@@ -17,29 +18,29 @@
 </template>
 
 <script>
+import Credentials from "../components/Credentials"
 export default {
-  name: "Home",
-   mounted() {
-    setTimeout(() => {
-      this.$router.replace("/register");
-    }, 2000);
+  name: "Login",
+  components: {
+    Credentials,
   },
-};
+}
 </script>
 
 <style scoped>
-.landing {
+.login {
   background-color: #082756;
   display: flex;
   flex-direction: column;
 }
-header {
+.logored {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 .mainDiv {
   display: flex;
+  margin: auto;
   flex-direction: column;
   align-items: center;
 }

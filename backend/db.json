@@ -1,11 +1,49 @@
 {
   "users": [
     {
-      "uuid": "Jb0jMyhRuh",
-      "username": "Matilda",
-      "password": "$2b$10$DLn.ZQMDtJJ1o/fU0dPlKeZFlfRdoKrYUVv7YqGvgSvG6sFfNpP.e",
-      "userkey": "U2FsdGVkX19DIXNLsl6OBx+4aP0wUPw0VnrSkxJg5z4="
+      "uuid": "sehRSJ1NKX",
+      "username": "Maria",
+      "password": "$2b$10$9/7Fm9Z59MvhRnDz/uDrc.xtg.4iwhbn7XkQCoKeMYPwc5q4ynS76",
+      "userkey": "U2FsdGVkX18eq+DGavcuDVrqOldsM9t5dP+V3qeEfTk=",
+      "hashtagsFollowed": [
+        "#fun",
+        "#hello",
+        "#satan"
+      ]
+    },
+    {
+      "uuid": "TouDSs0uiI",
+      "username": "Michele",
+      "password": "$2b$10$vTjanlZtVjBZLx/SzvQGy.nleQ5Ny1EuXtLY6g84PzOiHSeaHjE7.",
+      "userkey": "U2FsdGVkX18cWzSF8+YlfqSqFD6LGDD4woYY8rh819U=",
+      "hashtagsFollowed": []
+    },
+    {
+      "uuid": "af220nWI9f",
+      "username": "Hanna",
+      "password": "$2b$10$3e2UOLmNLUvcLUzp0A2F9.Qmy3QyjU30qoFcNObBdgDnT7M1xNn96",
+      "userkey": "U2FsdGVkX1/SmwCquz0c8wCD/JcPAyII3iPDi77Zm6g=",
+      "hashtagsFollowed": []
     }
   ],
-  "flows": []
+  "flows": [
+    {
+      "flowID": "-DAGUX8Kn",
+      "hashtag": "#fun",
+      "info": "hejgej",
+      "owner": "Maria"
+    },
+    {
+      "flowID": "oDTM5nTnJ",
+      "hashtag": "#fun",
+      "info": "hanna report",
+      "owner": "Hanna"
+    },
+    {
+      "flowID": "5UD60wA5V",
+      "hashtag": "#nej",
+      "info": " report",
+      "owner": "Hanna"
+    }
+  ]
 }

@@ -5,25 +5,26 @@ const shortid = require('shortid');
 const jwt = require('jsonwebtoken');
 
 router.post('/', (req, res) => {
-    if(!req.body.info || !req.body.hashtag) {
-        return res.send('no content available');
-    }
+
     let token = req.headers['authorization'].split(' ')[1];
     try {
         const verifiedUser = jwt.verify(token, process.env.JWT_)
         const user = db.get('users').find({ uuid: verifiedUser.uuid }).value();
+        const currentDate = new Date();
 
         let newFlow = {
             flowID: shortid.generate(),
+            date: new Date(),
             hashtag: req.body.hashtag,
             info: req.body.info,
             owner: user.username
         };
 
         db.get('flows').push(newFlow).write()
+        console.log('new flow', currentDate) //jwt malformed
         res.status(201).send('Flow added!')
     } catch(err) {
-        res.status(400).send('hm..');
+        res.status(404).send('hm..');
         console.log(err)
     }
 });

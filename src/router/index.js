@@ -17,14 +17,19 @@ const routes = [
   },
   {
     path: '/flow',
-    name: 'Flow',
-    component: () => import('../views/Flow.vue')
+    name: 'Flows',
+    component: () => import('../views/Flows.vue')
   },
   {
     path: '/register',
     name: 'SignUp',
     component: () => import('../views/SignUp.vue')
-  }
+  },
+  {
+    path: '/newFlow',
+    name: 'NewFlow',
+    component: () => import('../views/NewFlow.vue')
+  },
 
 ]
 

@@ -1,9 +1,9 @@
 <template>
   <main>
     <section class="login">
-      <input type="text" placeholder="Användarnamn" />
-      <input type="text" placeholder="Lösenord" />
-      <button @click="goTo">Registrera</button>
+      <input v-model="username" type="text" placeholder="Användarnamn" />
+      <input v-model="password" type="password" placeholder="Lösenord" />
+      <button @click="create">Registrera</button>
     </section>
   </main>
 </template>
@@ -11,9 +11,21 @@
 <script>
 export default {
   name: "NewCredentials",
+  data() {
+    return {
+      username: '',
+      password:''
+    }
+  },
   methods: {
+    create() {
+      this.$store.dispatch('signUp', {
+        username: this.username,
+        password: this.password
+      })
+    },
       goTo() {
-          this.$router.push('/Flow')
+          this.$router.push('/login')
       }
   }
 };

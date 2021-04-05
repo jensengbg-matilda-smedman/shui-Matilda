@@ -24,23 +24,54 @@
       "password": "$2b$10$3e2UOLmNLUvcLUzp0A2F9.Qmy3QyjU30qoFcNObBdgDnT7M1xNn96",
       "userkey": "U2FsdGVkX1/SmwCquz0c8wCD/JcPAyII3iPDi77Zm6g=",
       "hashtagsFollowed": []
+    },
+    {
+      "uuid": "G1W6PYbEJI",
+      "username": "Matilda",
+      "password": "$2b$10$2nVEKm85./c7JSWXhpdD9O/isLSBC1KAkrkZSQx1Pjs1JOkmjzorq",
+      "userkey": "U2FsdGVkX1+4C6QVKKAMjK297LYzFQY8CL7mHC+pj/c=",
+      "hashtagsFollowed": []
+    },
+    {
+      "uuid": "XgYgE4YMF_",
+      "username": "Frodo",
+      "password": "$2b$10$ZS1M778yK8rgCAJZifERoO0TSuRYSPjeW4EQ3EjccwZZ498wM75F2",
+      "userkey": "U2FsdGVkX18oHL88ms/7FCr5dh1SJ+G3bCzkfXBH6KQ=",
+      "hashtagsFollowed": []
+    },
+    {
+      "uuid": "b1KEWKjyWl",
+      "username": "Per",
+      "password": "$2b$10$s0fjaNDlG.NXeqfnsEjRneJn3SffhCiSZ16xxqrzsiybVpCCqQe4e",
+      "userkey": "U2FsdGVkX1/JUT2h3FtsBaOtcyVTuWQF2pIyA2aA0oI=",
+      "hashtagsFollowed": []
+    },
+    {
+      "uuid": "vmHcRrsxzN",
+      "username": "eve",
+      "password": "$2b$10$2hhymZtqm/BvGHwQeGP.e.Tv43QrR80VuHR08HiiIsu279eZwqqAm",
+      "userkey": "U2FsdGVkX19FmlIj/HxV3Z7mWMzIah9d4QrkYaGoTyY=",
+      "hashtagsFollowed": []
     }
   ],
   "flows": [
-    {
+    { 
       "flowID": "-DAGUX8Kn",
+      "date": "2021-04-03T19:54:21",
       "hashtag": "#fun",
       "info": "hejgej",
       "owner": "Maria"
     },
     {
       "flowID": "oDTM5nTnJ",
+      "date": "2021-04-03T20:01:43",
       "hashtag": "#fun",
       "info": "hanna report",
       "owner": "Hanna"
     },
     {
       "flowID": "5UD60wA5V",
+      "date": "2021-04-03T20:03:29",
       "hashtag": "#nej",
       "info": " report",
       "owner": "Hanna"

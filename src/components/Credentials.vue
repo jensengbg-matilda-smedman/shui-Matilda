@@ -1,9 +1,9 @@
 <template>
   <main>
     <section class="login">
-      <input type="text" placeholder="Användarnamn" />
-      <input type="text" placeholder="Lösenord" />
-      <button @click="goTo">Logga in</button>
+      <input v-model="username" type="text" placeholder="Användarnamn" />
+      <input v-model="password" type="password" placeholder="Lösenord" />
+      <button @click="login">Logga in</button>
     </section>
   </main>
 </template>
@@ -11,10 +11,19 @@
 <script>
 export default {
   name: "Credentials",
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
   methods: {
-      goTo() {
-          this.$router.push('/Flow')
-      }
+      login() {
+        this.$store.dispatch('login', {
+          username: this.username, 
+          password: this.password
+        });
+      },
   }
 };
 </script>

@@ -24,6 +24,7 @@ router.post('/login', async (req, res) => {
             const DECRYPTED_USER_KEY = bytes.toString(CryptoJS.enc.Utf8);
             // JTW
             const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_);
+            console.log('token', token);
 
             // return key + JWT to frontend
             res.send({

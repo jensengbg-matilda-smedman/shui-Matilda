@@ -8,6 +8,7 @@ const CryptoJS = require('crypto-js');
 const router = new Router();
 
 router.post('/', async (req, res) => {
+    
     if(req.body.username && req.body.password) { 
         const HASHED_PW = await bcrypt.hash(req.body.password, 10);
         const USER_KEY = shortid.generate();
@@ -21,22 +22,13 @@ router.post('/', async (req, res) => {
             hashtagsFollowed: []
         }
 
-        let existingUser = db.get('users').find(req.body.username).value();
-        if (existingUser = undefined) {
+        let existingUser = db.get('users').find({username: req.body.username}).value();
+        if (!existingUser) {
             db.get('users').push(user).write();
-            res.status(201).send('user ok')
+            return res.status(201).send('user ok')
         } else {
-            res.status(400).send('user already exitst')
+            res.status(409).send('user already exitst')
         }
-        // Add new user to db
-        db.get('users')
-        .push(user)
-        .write()
-
-        res.status(201).send('User created');
-    
-    } else {
-        res.status(400).send('Did you entered the credentials correctly?')
     }
 })
 
@@ -47,9 +39,19 @@ router.delete('/', (req, res) => {
         db.get('users').remove({uuid: verified_user.uuid}).write();
         res.status(201).send('user deleted!')
 
-        db.get('flows').filter({owner: CryptoJS.SHA3(verified_user.uuid).toString()}).forEach((users) => {
-            users.username = 'Deleted'
-        }).write();
+        let user = db.get("user").find({ uuid: verified_user.uuid }).value();
+        let flows = db
+          .get('flows').filter({ owner: user.username }).forEach((flow) => {
+            {
+              flow.owner = 'Anonymous';
+            }
+          })
+          .write();
+          console.log('flows', flows)
+        db.get('users').remove({ uuid: verified_user.uuid }).write();
+        if (user == undefined) return res.sendStatus(404);
+    
+        res.status(200).send("User deleted");
     } catch {
         res.status(400).send('not deleted?')
     }

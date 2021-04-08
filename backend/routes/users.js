@@ -11,7 +11,8 @@ router.post('/', async (req, res) => {
     
     if(req.body.username && req.body.password) { 
         const HASHED_PW = await bcrypt.hash(req.body.password, 10);
-        const USER_KEY = shortid.generate();
+        const USER_KEY = process.env.PUBLIC_KEY;
+        
         const ENCRYPTED_USERKEY = CryptoJS.AES.encrypt(USER_KEY, process.env.SECRET).toString();
 
         let user = {
@@ -36,24 +37,17 @@ router.delete('/', (req, res) => {
     const token = req.headers['authorization'].split(' ')[1];
     try {
         const verified_user = jwt.verify(token, process.env.JWT_)
+        
+        let findUser =  db.get('users').find({uuid: verified_user.uuid}).value();
+        
+        db.get('flows').filter({ owner: findUser.username})
+        .forEach((flows) => {flows.owner = 'Anonymous';}).write();
+        
         db.get('users').remove({uuid: verified_user.uuid}).write();
-        res.status(201).send('user deleted!')
+        res.status(201).send('user deleted!');
 
-        let user = db.get("user").find({ uuid: verified_user.uuid }).value();
-        let flows = db
-          .get('flows').filter({ owner: user.username }).forEach((flow) => {
-            {
-              flow.owner = 'Anonymous';
-            }
-          })
-          .write();
-          console.log('flows', flows)
-        db.get('users').remove({ uuid: verified_user.uuid }).write();
-        if (user == undefined) return res.sendStatus(404);
-    
-        res.status(200).send("User deleted");
     } catch {
-        res.status(400).send('not deleted?')
+        res.status(400).send('not deleted?');
     }
 })
 

@@ -1,80 +1,86 @@
 {
   "users": [
     {
-      "uuid": "sehRSJ1NKX",
+      "uuid": "e9KO1S6nS",
       "username": "Maria",
-      "password": "$2b$10$9/7Fm9Z59MvhRnDz/uDrc.xtg.4iwhbn7XkQCoKeMYPwc5q4ynS76",
-      "userkey": "U2FsdGVkX18eq+DGavcuDVrqOldsM9t5dP+V3qeEfTk=",
+      "password": "$2b$10$1zUpscV54ykcYu0GYjn4G.ajMbJRK9X54YMlGm7gfWf9DANyXg4oS",
+      "userkey": "U2FsdGVkX1+gyGfOUwp1jgewMLNw2Glhv/bbcsEGAwF2OYVISf7cNGKQ0X7jL7m2",
       "hashtagsFollowed": [
-        "#fun",
-        "#hello",
-        "#satan"
+        "#test",
+        "#test",
+        "#test",
+        "#nej"
       ]
     },
     {
-      "uuid": "TouDSs0uiI",
-      "username": "Michele",
-      "password": "$2b$10$vTjanlZtVjBZLx/SzvQGy.nleQ5Ny1EuXtLY6g84PzOiHSeaHjE7.",
-      "userkey": "U2FsdGVkX18cWzSF8+YlfqSqFD6LGDD4woYY8rh819U=",
-      "hashtagsFollowed": []
-    },
-    {
-      "uuid": "af220nWI9f",
-      "username": "Hanna",
-      "password": "$2b$10$3e2UOLmNLUvcLUzp0A2F9.Qmy3QyjU30qoFcNObBdgDnT7M1xNn96",
-      "userkey": "U2FsdGVkX1/SmwCquz0c8wCD/JcPAyII3iPDi77Zm6g=",
-      "hashtagsFollowed": []
-    },
-    {
-      "uuid": "G1W6PYbEJI",
+      "uuid": "SF6o3qN1-",
       "username": "Matilda",
-      "password": "$2b$10$2nVEKm85./c7JSWXhpdD9O/isLSBC1KAkrkZSQx1Pjs1JOkmjzorq",
-      "userkey": "U2FsdGVkX1+4C6QVKKAMjK297LYzFQY8CL7mHC+pj/c=",
-      "hashtagsFollowed": []
+      "password": "$2b$10$TLzxiQKEmKmvL8HS0Fv8L.lSlS1YcyEGygFia0N0DcRzYv1MTlxAC",
+      "userkey": "U2FsdGVkX1/d9z8kw3iMBd0hDaWtI5SAcpJqY0jreGGgyMmmj2d9vxsRvXDHrpeM",
+      "hashtagsFollowed": [
+        "#test"
+      ]
     },
     {
-      "uuid": "XgYgE4YMF_",
-      "username": "Frodo",
-      "password": "$2b$10$ZS1M778yK8rgCAJZifERoO0TSuRYSPjeW4EQ3EjccwZZ498wM75F2",
-      "userkey": "U2FsdGVkX18oHL88ms/7FCr5dh1SJ+G3bCzkfXBH6KQ=",
-      "hashtagsFollowed": []
-    },
-    {
-      "uuid": "b1KEWKjyWl",
-      "username": "Per",
-      "password": "$2b$10$s0fjaNDlG.NXeqfnsEjRneJn3SffhCiSZ16xxqrzsiybVpCCqQe4e",
-      "userkey": "U2FsdGVkX1/JUT2h3FtsBaOtcyVTuWQF2pIyA2aA0oI=",
-      "hashtagsFollowed": []
-    },
-    {
-      "uuid": "vmHcRrsxzN",
-      "username": "eve",
-      "password": "$2b$10$2hhymZtqm/BvGHwQeGP.e.Tv43QrR80VuHR08HiiIsu279eZwqqAm",
-      "userkey": "U2FsdGVkX19FmlIj/HxV3Z7mWMzIah9d4QrkYaGoTyY=",
-      "hashtagsFollowed": []
+      "uuid": "Q5clexdwg",
+      "username": "mr.moo",
+      "password": "$2b$10$7gwCNf5srz67FT/u3SP4AuYqAhdDynOwl.XM459AoBs35kplbD3mO",
+      "userkey": "U2FsdGVkX1/RNaj2+f27y6lkbe+2zSTYqgsdyorK30O5fD9ITsLPAphUn7slF72M",
+      "hashtagsFollowed": [
+        "#study",
+        " #vue",
+        "#hej",
+        "#test",
+        "#bu"
+      ]
     }
   ],
   "flows": [
-    { 
-      "flowID": "-DAGUX8Kn",
-      "date": "2021-04-03T19:54:21",
-      "hashtag": "#fun",
-      "info": "hejgej",
+    {
+      "flowID": "pjnPpgV4c",
+      "date": "2021-04-08T18:03:26.203Z",
+      "hashtags": [
+        "#test"
+      ],
+      "info": "U2FsdGVkX18Rdp8tHpkmQ+Y9msfbGbRY+Gx3ZHdyWVM=",
       "owner": "Maria"
     },
     {
-      "flowID": "oDTM5nTnJ",
-      "date": "2021-04-03T20:01:43",
-      "hashtag": "#fun",
-      "info": "hanna report",
-      "owner": "Hanna"
+      "flowID": "wDshEschi",
+      "date": "2021-04-08T18:03:37.764Z",
+      "hashtags": [
+        "#test"
+      ],
+      "info": "U2FsdGVkX1950f+9rnn0Chb6dUt1AFal/8s6gIWe2wo=",
+      "owner": "Maria"
     },
     {
-      "flowID": "5UD60wA5V",
-      "date": "2021-04-03T20:03:29",
-      "hashtag": "#nej",
-      "info": " report",
-      "owner": "Hanna"
+      "flowID": "j8w56Zff5",
+      "date": "2021-04-08T18:06:41.560Z",
+      "hashtags": [
+        "#nej"
+      ],
+      "info": "U2FsdGVkX19+U75o2SJxjoMvfHDvHSJxE6LrOwwwHKY=",
+      "owner": "Maria"
+    },
+    {
+      "flowID": "bN3rSN7lm",
+      "date": "2021-04-08T18:07:54.486Z",
+      "hashtags": [
+        "#test"
+      ],
+      "info": "U2FsdGVkX1+Nj3WsVzPOvLUz8SxoEZtV5z2Lj8UCysA=",
+      "owner": "Matilda"
+    },
+    {
+      "flowID": "rvUjWNNai",
+      "date": "2021-04-08T19:14:31.926Z",
+      "hashtags": [
+        "#study",
+        " #vue"
+      ],
+      "info": "U2FsdGVkX18S7/aIR+0mrUt8sf8QqpDUb92YNe0+UV1X3yhG90JQihC6DXSZPqoXiVuinqyYyqWOO/3UgP9nSw==",
+      "owner": "mr.moo"
     }
   ]
 }

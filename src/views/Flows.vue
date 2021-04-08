@@ -1,7 +1,8 @@
 <template>
   <div class="flowDiv">
     <header>
-      <img src="../assets/reds.svg" alt="" />
+      <img  v-on:click="isHidden = !isHidden" src="../assets/reds.svg" alt="" />
+      <Settings v-if="!isHidden"/>
     </header>
     <Flow v-for="flow in getflows" :key="flow.flowID" :flowItem="flow" />
     <div class="penImg">
@@ -12,16 +13,17 @@
 
 <script>
 import Flow from '../components/Flow'
-
+import Settings from '../components/Settings'
 export default {
     name: "Flows",
     data() {
       return {
+        isHidden: true,
         flows: ''
       }
     }, 
     components: {
-      Flow
+      Flow, Settings
     },
     computed: {
      getflows() {
@@ -52,5 +54,16 @@ header {
   border: 1px solid black;
   background-color: #fff;
   margin: 1rem;
+}
+Settings {
+   width: 100px;
+  height: auto;
+  background-color: rgb(111, 153, 139);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: .4rem 0 .4rem 0;
+  padding: .4rem 0 .4rem 0;
+  background-color: #f05e5e;
 }
 </style>

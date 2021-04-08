@@ -1,4 +1,4 @@
-const { Router, response } = require('express');
+const { Router } = require('express');
 const { db } = require('./db');
 const bcrypt = require('bcrypt');
 const CryptoJS = require('crypto-js');
@@ -19,14 +19,13 @@ router.post('/login', async (req, res) => {
         const valid = await bcrypt.compare(req.body.password, user.password)
 
         if(valid){
-            // decrypt userkey
+        
             const bytes = CryptoJS.AES.decrypt(user.userkey, process.env.SECRET);
             const DECRYPTED_USER_KEY = bytes.toString(CryptoJS.enc.Utf8);
-            // JTW
+            
             const token = jwt.sign({ uuid: user.uuid }, process.env.JWT_);
             console.log('token', token);
 
-            // return key + JWT to frontend
             res.send({
                 token: token,
                 userkey: DECRYPTED_USER_KEY

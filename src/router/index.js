@@ -30,6 +30,11 @@ const routes = [
     name: 'NewFlow',
     component: () => import('../views/NewFlow.vue')
   },
+  {
+    path: '/removed',
+    name: 'RemovedUser',
+    component: () => import('../views/RemovedUser.vue')
+  }
 
 ]
 

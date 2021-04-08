@@ -25,5 +25,5 @@ App.use('/allHashtags', allHashtags);
 
 
 App.listen(3000, () => {
-    console.log('Super secure server is up n running!')
+    console.log('server is running!')
 })

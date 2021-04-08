@@ -4,8 +4,8 @@
           <p class="date"> {{ flowItem.date }} </p>
           <p> {{ flowItem.info }} </p>
           <p class="owner"> -{{ flowItem.owner }} </p>
-          <div class="hashtag">
-              <p> {{ flowItem.hashtag }} </p>
+          <div class="hashtag" v-for="hashtag in flowItem.hashtags" :key="hashtag">
+              <p> {{ hashtag }} </p>
           </div>
       </article>
   </section>

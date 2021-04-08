@@ -3,7 +3,7 @@
     <article>
       <textarea v-model="info" type="text" name="" id="" />
       <input
-        v-model="hashtag"
+        v-model="hashtags"
         type="text"
         placeholder="#hashtag"
         name=""
@@ -19,15 +19,16 @@ export default {
   name: "NewFlow",
   data() {
     return {
-      info: "",
-      hashtag: "",
+      info: '',
+      hashtags: '',
     };
   },
   methods: {
     publishFlow() {
+      let hashtagArray = this.hashtags.split(',')
       this.$store.dispatch("createdflow", {
         info: this.info,
-        hashtag: this.hashtag,
+        hashtags: hashtagArray,
       });
     },
   },

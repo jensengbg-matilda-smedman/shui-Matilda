@@ -9,7 +9,7 @@
       </div>
     </main>
     <footer>
-      <img src="../assets/wave.svg" alt="" />
+      <img class="wave" src="../assets/wave.svg" alt="" />
     </footer>
   </div>
 </template>
@@ -47,5 +47,7 @@ h2 {
 
   color: #ffffff;
 }
-
+.wave {
+  width: 100%;
+}
 </style>

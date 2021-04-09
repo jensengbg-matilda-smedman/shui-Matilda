@@ -5,7 +5,7 @@
           <p> {{ flowItem.info }} </p>
           <p class="owner"> -{{ flowItem.owner }} </p>
           <div class="hashtag" v-for="hashtag in flowItem.hashtags" :key="hashtag">
-              <p> {{ hashtag }} </p>
+              <p class="hash"> {{ hashtag }} </p>
           </div>
       </article>
   </section>
@@ -22,6 +22,7 @@ export default {
 </script>
 
 <style scoped>
+
 .item {
     margin-left: 0.5rem;
     display: flex;
@@ -42,9 +43,12 @@ color: rgba(0, 0, 0, 0.6);
 .owner {
     font-weight: bold;
 }
+.hash {
+    padding: 0.5rem;
+}
 
 .hashtag {
-    position: static;
+position: static;
 width: 100px;
 height: 23px;
 left: 16px;

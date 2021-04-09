@@ -13,7 +13,7 @@
       <p @click="goTo">Har du redan konto?</p>
     </header>
     <footer>
-      <img src="../assets/wave.svg" alt="" />
+      <img class="wave" src="../assets/wave.svg" alt="" />
     </footer>
   </div>
 </template>
@@ -38,6 +38,7 @@ export default {
   background-color: #082756;
   display: flex;
   flex-direction: column;
+  margin: 0;
 }
 .logored {
   display: flex;
@@ -64,6 +65,7 @@ h1 {
 
   color: #ffffff;
 }
+
 h3 {
   height: 23px;
   font-family: PT Sans;
@@ -73,5 +75,8 @@ h3 {
   line-height: 23px;
   letter-spacing: 0.2em;
   color: rgba(0, 178, 255, 0.8);
+}
+.wave {
+  width: 100%;
 }
 </style>

@@ -64,7 +64,7 @@ router.post('/', async(req, res) => {
         const verified_user = jwt.verify(token, process.env.JWT_);
         let user = await db.get('users')
         .find({ uuid: verified_user.uuid })
-        .get('hashtagsFollowed').pullAll(req.body.hashtags).write()
+        .get('hashtagsFollowed').pullAll(req.body.hashtagsFollowed).write()
 
         res.status(200).send(user)
     } catch (error) {

@@ -9,6 +9,7 @@
         name=""
         id=""
       />
+      <p class="errorMsg">{{ errorMsg }}</p>
       <button @click="publishFlow">Publicera</button>
     </article>
   </div>
@@ -21,21 +22,31 @@ export default {
     return {
       info: '',
       hashtags: '',
+      errorMsg: ''
     };
   },
   methods: {
     publishFlow() {
+      if (this.info >= 0) {
+        this.errorMsg = 'Kan inte skicka tom info'
+      } else {
       let hashtagArray = this.hashtags.split(',')
       this.$store.dispatch("createdflow", {
         info: this.info,
         hashtags: hashtagArray,
       });
+      }
+      
     },
   },
 };
 </script>
 
 <style scoped>
+.errorMsg {
+  color: #ef4343;
+  font-weight: bolder;
+}
 div {
   background-color: #082756;
 }
@@ -57,6 +68,12 @@ input {
   border-radius: 4px;
   border: white solid 1px;
   color: #ffffff;
+  text-align: center;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
 }
 ::-webkit-input-placeholder {
   text-align: center;

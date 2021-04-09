@@ -16,9 +16,9 @@ export default new Vuex.Store({
     setFlows(state, flows) {
       state.flows = flows;
     },
-      setFollowed(state, followed) {
-        state.followed = followed;
-      },  
+    setFollowed(state, followed) {
+      state.followed = followed;
+    },  
   },
   actions: {
     async fetchFlows(ctx) {
@@ -41,8 +41,7 @@ export default new Vuex.Store({
     },
     async createdflow(ctx, newFlow) {
       const createdflow = await ax.post(
-        `${ctx.state.API}/flows`, newFlow,
-        {
+        `${ctx.state.API}/flows`, newFlow, {
           headers: {
             'authorization': `Bearer ${sessionStorage.getItem('shuiToken')}`,
           },
@@ -79,32 +78,24 @@ export default new Vuex.Store({
       }
     },
     async followedHashtags(ctx) {
-      const followed = await ax.get(
-        `${ctx.state.API}/hashtags`,
-        {
+      const followed = await ax.get(`${ctx.state.API}/hashtags`, {
           headers: {
             authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         }
       );
-        console.log('followed', followed)
       ctx.commit("setFollowed", followed);
     },
     async addHashtag(ctx, hashtag) {
-      console.log('hashtags', hashtag)
-      const hasht = await ax.post(
-        `${ctx.state.API}/hashtags`,
-        { hashtagsFollowed: hashtag },
-        {
+      await ax.post(`${ctx.state.API}/hashtags`, { hashtagsFollowed: hashtag }, {
           headers: {
             authorization: `Bearer ${sessionStorage.getItem("shuiToken")}`,
           },
         }
       );
-      console.log("HASHTAG ADDED", hasht);
     },
     async removeHashtag(ctx, hashtag) {
-      await ax.post(`${ctx.state.API}/hashtags/remove`, {followedHashtags: [hashtag]}, {
+      await ax.post(`${ctx.state.API}/hashtags/remove`, {hashtagsFollowed: [hashtag]}, {
         headers: {
           'authorization': `Bearer ${sessionStorage.getItem('shuiToken')}`
         }

@@ -3,11 +3,15 @@
     <h1>streams</h1>
     <article class="hashArt" > 
       <div v-for="(followed, index) in followds.data" :key="index" :hashtag="followed" class="followedHashtags">{{ followed }} 
-        <p class="remove" @click="removeHashtag(index)">X</p>
+        <p class="remove" @click="removeHashtag(followed)">X</p>
       </div>
     </article>
-    <input v-model="hashtag" class="hashtag" placeholder="#hashtags"/>
-    <button @click="addHashtag(hashtag)">add Hashtag</button>
+    <article class="hashArticle">
+      <input v-model="hashtag" class="hashtag" placeholder="#hashtags"/>
+      <div class="checkDiv">
+        <img src="../assets/check.svg" @click="addHashtag(hashtag)" class="check" alt="">
+      </div>
+    </article>
     <button @click="deleteUser">Shit, theyre on to me!</button>
   </div>
 </template>
@@ -27,9 +31,13 @@ export default {
     },
     addHashtag(hashtagValue) {
       this.$store.dispatch("addHashtag", hashtagValue);
+      this.$store.dispatch("followedHashtags");
+      this.$store.dispatch("fetchFlows");
     },
     removeHashtag(index) {
       this.$store.dispatch("removeHashtag", index);  
+      this.$store.dispatch("followedHashtags");
+      this.$store.dispatch("fetchFlows");
     }
   },
   beforeMount() {
@@ -62,12 +70,10 @@ h1 {
   font-weight: bold;
   font-size: 32px;
   line-height: 150%;
-  /* identical to box height, or 48px */
-
   display: flex;
   align-items: center;
-
   color: #ffffff;
+  margin-left: 2rem;
 }
 button {
   width: 347px;
@@ -85,24 +91,53 @@ button {
   line-height: 150%;
 }
 .hashArt {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 160px 160px;
+  width: 131px;
+  margin-left: 20%;
 }
 .followedHashtags {
-  max-width: 20%;
+  min-width: 10px;
+  margin: 1rem;
+  padding-left: 0.5rem;
   display: flex;
   background-color: rgba(255, 255, 255, 0.1);
+  text-align: center;
+  justify-content: space-between;;
+  align-items: center;
+  border-radius: 4px;
 }
+.hashArticle {
+  height: 72px;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkDiv {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: white;
+  height: 72px;
+  border: 2px solid #FFFFFF;
+  border-radius: 0px 4px 4px 0px;
+  width: 50px;
+}
+
 .remove {
   margin-top: 0;
+  margin-bottom: 0;
   margin-left: 0.5rem;
-  background-color:  rgba(255, 255, 255, 0.2);;
+  padding: 0.5rem;
+  background-color:  rgba(255, 255, 255, 0.2);
+  border-radius: 0px 4px 4px 0px;
 }
 input {
   margin-top: 1rem;
-  width: 347px;
+  width: 300px;
   height: 72px;
-  background-color: #082756;
+  background-color: #ef4343;
   border: 1px solid #ffffff;
   color: #ffffff;
   box-sizing: border-box;

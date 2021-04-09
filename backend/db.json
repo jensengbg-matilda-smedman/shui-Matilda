@@ -5,12 +5,7 @@
       "username": "Maria",
       "password": "$2b$10$1zUpscV54ykcYu0GYjn4G.ajMbJRK9X54YMlGm7gfWf9DANyXg4oS",
       "userkey": "U2FsdGVkX1+gyGfOUwp1jgewMLNw2Glhv/bbcsEGAwF2OYVISf7cNGKQ0X7jL7m2",
-      "hashtagsFollowed": [
-        "#test",
-        "#test",
-        "#test",
-        "#nej"
-      ]
+      "hashtagsFollowed": []
     },
     {
       "uuid": "SF6o3qN1-",
@@ -22,16 +17,15 @@
       ]
     },
     {
-      "uuid": "Q5clexdwg",
-      "username": "mr.moo",
-      "password": "$2b$10$7gwCNf5srz67FT/u3SP4AuYqAhdDynOwl.XM459AoBs35kplbD3mO",
-      "userkey": "U2FsdGVkX1/RNaj2+f27y6lkbe+2zSTYqgsdyorK30O5fD9ITsLPAphUn7slF72M",
+      "uuid": "JFgbIwV1m",
+      "username": "Frodo",
+      "password": "$2b$10$MC9kIGKnOBgaRyxY2b/rjeDuPw7KK7ITpeHV9ujA7EF8pRJKKr9P2",
+      "userkey": "U2FsdGVkX1+tL3sfo0rGPOOcute3jJmX8sxe8tW1ede/RcFtB0PCsWn7U9OEfRpc",
       "hashtagsFollowed": [
-        "#study",
-        " #vue",
-        "#hej",
-        "#test",
-        "#bu"
+        "#frukt",
+        "#frukt",
+        "#plugg",
+        "#kvällsmys"
       ]
     }
   ],
@@ -77,10 +71,47 @@
       "date": "2021-04-08T19:14:31.926Z",
       "hashtags": [
         "#study",
-        " #vue"
+        "#vue"
       ],
       "info": "U2FsdGVkX18S7/aIR+0mrUt8sf8QqpDUb92YNe0+UV1X3yhG90JQihC6DXSZPqoXiVuinqyYyqWOO/3UgP9nSw==",
-      "owner": "mr.moo"
+      "owner": "Anonymous"
+    },
+    {
+      "flowID": "jopG44qaL",
+      "date": "2021-04-09T07:02:27.554Z",
+      "hashtags": [
+        "#info",
+        "#frukt"
+      ],
+      "info": "U2FsdGVkX1+ofAOn78rCESDfcqTxxw3mZVJez/AS3p+HRitEe8vn6VOQpkMR//sDiyg4Dt9z7uielIemIf6icescpWscqX7DhAQdFdJvosc=",
+      "owner": "Frodo"
+    },
+    {
+      "flowID": "4o-QOjavE",
+      "date": "2021-04-09T07:18:57.610Z",
+      "hashtags": [
+        "#plugg"
+      ],
+      "info": "U2FsdGVkX19ORxzF2r2Tn5LdB1BoQpM0Ft4JUfAwfPvD2O+IDZJCBeuTpprk8iXk",
+      "owner": "Anonymous"
+    },
+    {
+      "flowID": "l98PDG5Yn",
+      "date": "2021-04-09T07:20:10.883Z",
+      "hashtags": [
+        "#frukt"
+      ],
+      "info": "U2FsdGVkX1+QlvNa/NDJ1OQYO/D9ETK0QsrnJKwwpFUeIrpE3ticqUZTPKC4bXu+Viq3tcS7LNU0RFMUMg9BKw==",
+      "owner": "Frodo"
+    },
+    {
+      "flowID": "B3NM1eg52",
+      "date": "2021-04-09T08:18:27.050Z",
+      "hashtags": [
+        "#kvällsmys"
+      ],
+      "info": "U2FsdGVkX18wA6wXLrk4MGMHeb7YR0XD7wrSe3bScLRWYJ0wKosgeYUPQvkZXQbY",
+      "owner": "Frodo"
     }
   ]
 }

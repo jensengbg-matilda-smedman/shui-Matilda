@@ -47,6 +47,12 @@ input {
   box-sizing: border-box;
   border-radius: 3px;
   margin-bottom: 1rem;
+  text-align: center;
+  font-family: PT Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 23px;
 }
 ::-webkit-input-placeholder {
   text-align: center;

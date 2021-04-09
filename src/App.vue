@@ -5,12 +5,21 @@
 </template>
 
 <style lang="scss">
+body {
+  background: #082756;
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
 #app {
+  width: 100vw;
+  height: 100vh;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  background: #082756;
 }
 
 #nav {

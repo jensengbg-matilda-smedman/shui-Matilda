@@ -33,23 +33,6 @@ router.get('/', (req, res) => {
 })
 
 
-/*router.get('/', (req, res) => {
-               try {
-                   const flows = db.get("flows").value();
-                   //flows.forEach((flows) => {
-                     //let bytes = CryptoJS.AES.decrypt(flows.info, process.env.SECRET);
-                     //let text = bytes.toString(CryptoJS.enc.Utf8);
-                     //flows.info = text;
-                   //});
-                   
-                   res.send(flows);
-                 
-               } catch (err) {
-                   res.status(400).send('hm..');
-                   console.log(err)
-               }
-           }) */
-
 router.post('/', (req, res) => {
     let token = req.headers['authorization'].split(' ')[1];
     try {

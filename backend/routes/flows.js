@@ -36,10 +36,10 @@ router.get('/', (req, res) => {
 router.post('/', (req, res) => {
     let token = req.headers['authorization'].split(' ')[1];
     try {
-        const verifiedUser = jwt.verify(token, process.env.JWT_)
-        let userhash = db.get('users').find({ uuid: verifiedUser.uuid }).get('hashtagsFollowed').push(...req.body.hashtags).write()
+        const verified_user = jwt.verify(token, process.env.JWT_)
+        let userhash = db.get('users').find({ uuid: verified_user.uuid }).get('hashtagsFollowed').push(...req.body.hashtags).write()
         console.log('userhash', userhash)
-        const user = db.get('users').find({ uuid: verifiedUser.uuid }).value();
+        const user = db.get('users').find({ uuid: verified_user.uuid }).value();
 
         let newFlow = {
             flowID: shortid.generate(),

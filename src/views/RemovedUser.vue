@@ -1,6 +1,6 @@
 <template>
   <div class="landing">
-    <header>
+    <header @click="goTo" >
       <img src="../assets/reds.svg" alt="" />
     </header>
     <main>
@@ -16,7 +16,12 @@
 
 <script>
 export default {
-  name: "RemovedUser"
+  name: "RemovedUser",
+    methods: {
+      goTo() {
+           this.$router.push('/register')
+      }
+  }
 };
 </script>
 
